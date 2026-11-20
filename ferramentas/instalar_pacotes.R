@@ -1,0 +1,10 @@
+# Instala os pacotes R usados nos cadernos e registra o kernel R no Jupyter.
+# Uso: Rscript ferramentas/instalar_pacotes.R   (com a .venv no PATH, para o comando jupyter existir)
+lib <- Sys.getenv("R_LIBS_USER")
+dir.create(lib, recursive = TRUE, showWarnings = FALSE)
+.libPaths(c(lib, .libPaths()))
+pacotes <- c("IRkernel", "glmnet", "rpart", "randomForest", "FNN", "e1071", "gbm", "arules", "mgcv")
+faltam <- setdiff(pacotes, rownames(installed.packages()))
+if (length(faltam)) install.packages(faltam, lib = lib, repos = "https://cloud.r-project.org")
+IRkernel::installspec(user = TRUE, name = "ir", displayname = "R")
+cat("Pacotes OK:", pacotes, "\n")

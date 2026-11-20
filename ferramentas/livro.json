@@ -1,0 +1,594 @@
+{
+ "titulo": "Aprendizado de Máquina",
+ "subtitulo": "uma abordagem estatística",
+ "autor": "Rafael Izbicki e Tiago Mendonça dos Santos",
+ "repo": "estudos-aprendizado-de-maquina-estatistico",
+ "linguagem": "r",
+ "paginas": 272,
+ "preparacao": "set.seed(42)\noptions(digits = 4, repr.plot.width = 7, repr.plot.height = 4.5)\nsuppressPackageStartupMessages({ library(glmnet); library(rpart); library(randomForest); library(FNN); library(e1071) })\ncat(\"Pronto.\", R.version.string, \"\n\")",
+ "capitulos": {
+  "1": {
+   "titulo": "Regressão: introdução",
+   "pag": 21,
+   "secoes": [
+    [
+     2,
+     "Notação e Suposições",
+     22
+    ],
+    [
+     2,
+     "Predição versus Inferência: Por que estimar r(x)?",
+     23
+    ],
+    [
+     2,
+     "As Duas Culturas",
+     26
+    ],
+    [
+     2,
+     "A Função de Risco",
+     27
+    ],
+    [
+     2,
+     "Seleção de Modelos: Super e Sub-Ajuste",
+     30
+    ],
+    [
+     3,
+     "Data Splitting e Validação Cruzada",
+     32
+    ],
+    [
+     3,
+     "Balanço entre Viés e Variância",
+     40
+    ],
+    [
+     2,
+     "Tuning Parameters",
+     42
+    ],
+    [
+     2,
+     "Resumo",
+     42
+    ]
+   ]
+  },
+  "2": {
+   "titulo": "Métodos Paramétricos",
+   "pag": 45,
+   "secoes": [
+    [
+     2,
+     "O Método dos Mínimos Quadrados",
+     46
+    ],
+    [
+     3,
+     "Mínimos Quadrados quando a Suposição de Linearidade Falha",
+     47
+    ],
+    [
+     3,
+     "Regressão Linear no R",
+     48
+    ],
+    [
+     2,
+     "Resumo",
+     49
+    ]
+   ]
+  },
+  "3": {
+   "titulo": "Métodos Paramétricos em Altas Dimensões",
+   "pag": 51,
+   "secoes": [
+    [
+     2,
+     "Busca pelo Melhor Subconjunto de Covariáveis",
+     51
+    ],
+    [
+     2,
+     "Regressão Stepwise",
+     53
+    ],
+    [
+     2,
+     "Lasso",
+     55
+    ],
+    [
+     3,
+     "Garantias Teóricas",
+     57
+    ],
+    [
+     2,
+     "Regressão Ridge",
+     58
+    ],
+    [
+     2,
+     "Formulação Alternativa",
+     59
+    ],
+    [
+     2,
+     "Interpretação Bayesiana",
+     60
+    ],
+    [
+     2,
+     "Regressão ridge e lasso no R",
+     61
+    ],
+    [
+     2,
+     "Exemplos",
+     61
+    ],
+    [
+     2,
+     "Resumo",
+     69
+    ]
+   ]
+  },
+  "4": {
+   "titulo": "Métodos Não Paramétricos",
+   "pag": 71,
+   "secoes": [
+    [
+     2,
+     "Séries Ortogonais",
+     71
+    ],
+    [
+     2,
+     "Splines",
+     74
+    ],
+    [
+     2,
+     "k Vizinhos Mais Próximos",
+     75
+    ],
+    [
+     2,
+     "Nadaraya-Watson",
+     77
+    ],
+    [
+     2,
+     "Regressão Polinomial Local",
+     79
+    ],
+    [
+     2,
+     "Métodos baseados em RKHSs",
+     80
+    ],
+    [
+     3,
+     "A matemática do RKHS",
+     82
+    ],
+    [
+     3,
+     "Solução para o problema de otimização",
+     84
+    ],
+    [
+     3,
+     "Exemplo 1: Kernel Ridge Regression",
+     85
+    ],
+    [
+     3,
+     "Exemplo 2: Support Vector Regression Machine",
+     91
+    ],
+    [
+     2,
+     "Modelos Aditivos",
+     92
+    ],
+    [
+     2,
+     "Árvores de Regressão",
+     95
+    ],
+    [
+     2,
+     "Bagging e Florestas Aleatórias",
+     100
+    ],
+    [
+     3,
+     "Florestas Aleatórias",
+     103
+    ],
+    [
+     2,
+     "Boosting",
+     107
+    ],
+    [
+     2,
+     "Redes Neurais Artificiais",
+     109
+    ],
+    [
+     3,
+     "Estimação: Backpropagation",
+     113
+    ],
+    [
+     3,
+     "Deep Learning",
+     114
+    ],
+    [
+     2,
+     "Exemplo",
+     117
+    ],
+    [
+     2,
+     "Um Pouco de Teoria",
+     120
+    ],
+    [
+     3,
+     "k-vizinhos Mais Próximos",
+     120
+    ],
+    [
+     3,
+     "Séries Ortogonais",
+     122
+    ],
+    [
+     2,
+     "Resumo",
+     124
+    ]
+   ]
+  },
+  "5": {
+   "titulo": "Métodos Não Paramétricos em Altas Dimensões",
+   "pag": 125,
+   "secoes": [
+    [
+     2,
+     "Taxas de convergência e a maldição da dimensionalidade",
+     125
+    ],
+    [
+     3,
+     "Esparsidade",
+     127
+    ],
+    [
+     3,
+     "Redundâcia",
+     128
+    ],
+    [
+     2,
+     "k Vizinhos Mais Próximos e Regressão Linear Local",
+     128
+    ],
+    [
+     2,
+     "Support Vector Regression",
+     129
+    ],
+    [
+     2,
+     "Séries Ortogonais",
+     129
+    ],
+    [
+     3,
+     "Bases espectrais",
+     129
+    ],
+    [
+     3,
+     "O estimador",
+     132
+    ],
+    [
+     2,
+     "Florestas Aleatórias",
+     133
+    ],
+    [
+     2,
+     "SpAM - Modelos Aditivos Esparsos",
+     133
+    ],
+    [
+     2,
+     "Resumo",
+     134
+    ]
+   ]
+  },
+  "6": {
+   "titulo": "Outros Aspectos de Regressão",
+   "pag": 137,
+   "secoes": [
+    [
+     2,
+     "Interpretabilidade (ExplainableML)",
+     137
+    ],
+    [
+     3,
+     "LIME - Local Interpretable Model-agnostic Explanations",
+     138
+    ],
+    [
+     3,
+     "PDP e ICE",
+     140
+    ],
+    [
+     2,
+     "Estimação de Densidades Condicionais",
+     142
+    ],
+    [
+     2,
+     "Inferência Conformal",
+     145
+    ]
+   ]
+  },
+  "7": {
+   "titulo": "Classificação: introdução",
+   "pag": 151,
+   "secoes": [
+    [
+     2,
+     "Função de Risco",
+     152
+    ],
+    [
+     2,
+     "Estimação do Risco e Seleção de Modelos",
+     154
+    ],
+    [
+     2,
+     "Balanço entre Viés e Variância",
+     155
+    ],
+    [
+     2,
+     "Outras medidas de desempenho",
+     156
+    ]
+   ]
+  },
+  "8": {
+   "titulo": "Métodos de classificação",
+   "pag": 159,
+   "secoes": [
+    [
+     2,
+     "Classificadores Plug-in",
+     159
+    ],
+    [
+     3,
+     "Métodos de regressão",
+     160
+    ],
+    [
+     3,
+     "Regressão logística",
+     160
+    ],
+    [
+     3,
+     "Bayes Ingênuo",
+     162
+    ],
+    [
+     3,
+     "Análise Discriminante",
+     165
+    ],
+    [
+     2,
+     "Support Vector Machines (SVM)",
+     169
+    ],
+    [
+     2,
+     "Árvores de Classificação",
+     174
+    ],
+    [
+     2,
+     "Bagging e Florestas Aleatórias",
+     176
+    ],
+    [
+     2,
+     "Boosting",
+     177
+    ],
+    [
+     2,
+     "Método dos k Vizinhos Mais Próximos",
+     179
+    ],
+    [
+     2,
+     "Redes Neurais Artificiais",
+     179
+    ],
+    [
+     2,
+     "Exemplos",
+     181
+    ]
+   ]
+  },
+  "9": {
+   "titulo": "Outros Aspectos de Classificação",
+   "pag": 187,
+   "secoes": [
+    [
+     2,
+     "Assimetria na Função de Perda, Conjuntos de Dados Desbalanceados e Outros Cortes",
+     187
+    ],
+    [
+     2,
+     "Classificação vs Estimação de Probabilidades",
+     190
+    ],
+    [
+     2,
+     "Dataset Shift e Viés de Seleção",
+     190
+    ],
+    [
+     3,
+     "Covariate Shift",
+     191
+    ],
+    [
+     3,
+     "Prior Shift",
+     194
+    ],
+    [
+     2,
+     "Combinando Classificadores",
+     195
+    ],
+    [
+     2,
+     "Teoria do Aprendizado Estatístico",
+     197
+    ],
+    [
+     3,
+     "Prova do teorema VC",
+     202
+    ],
+    [
+     2,
+     "Resumo",
+     204
+    ]
+   ]
+  },
+  "10": {
+   "titulo": "Redução de Dimensionalidade e Mudança de Representação",
+   "pag": 207,
+   "secoes": [
+    [
+     2,
+     "Componentes Principais (PCA - Principal Component Analysis)",
+     208
+    ],
+    [
+     3,
+     "Interpretação alternativa: escalonamento multidimensional",
+     211
+    ],
+    [
+     3,
+     "Aplicação: compressão de imagens",
+     212
+    ],
+    [
+     2,
+     "Kernel PCA (KPCA)",
+     216
+    ],
+    [
+     2,
+     "Projeções Aleatórias",
+     219
+    ],
+    [
+     2,
+     "Autoencoders",
+     220
+    ]
+   ]
+  },
+  "11": {
+   "titulo": "Análise de Agrupamento",
+   "pag": 227,
+   "secoes": [
+    [
+     2,
+     "K-Médias",
+     228
+    ],
+    [
+     2,
+     "Agrupamento Espectral",
+     233
+    ],
+    [
+     2,
+     "Métodos Hierárquicos",
+     237
+    ]
+   ]
+  },
+  "12": {
+   "titulo": "Regras de Associação",
+   "pag": 241,
+   "secoes": [
+    [
+     2,
+     "Regras de Associação",
+     241
+    ]
+   ]
+  },
+  "13": {
+   "titulo": "Sistemas de Recomendação",
+   "pag": 247,
+   "secoes": [
+    [
+     2,
+     "Filtro Colaborativo Baseado no Usuário",
+     248
+    ],
+    [
+     2,
+     "Filtro Colaborativo Baseado no Produto",
+     249
+    ],
+    [
+     2,
+     "FunkSVD",
+     249
+    ],
+    [
+     2,
+     "Seleção de Modelos",
+     250
+    ]
+   ]
+  }
+ }
+}
