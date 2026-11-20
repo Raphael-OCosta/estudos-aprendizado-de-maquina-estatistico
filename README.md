@@ -1,4 +1,4 @@
-# 📊 Estudos — *Aprendizado de Máquina: uma abordagem estatística* (Izbicki & Santos)
+# Estudos — *Aprendizado de Máquina: uma abordagem estatística* (Izbicki & Santos)
 
 > **A melhor forma de estudar um livro técnico é ler e praticar ao mesmo tempo.**
 > Leia uma seção, feche o livro e escreva o código com as próprias mãos. Só depois confira o gabarito.
@@ -6,17 +6,17 @@
 Este repositório registra meu estudo do livro de Rafael Izbicki e Tiago Mendonça dos Santos, que trata regressão, classificação e aprendizado não supervisionado do ponto de vista estatístico.
 Cada capítulo virou um caderno Jupyter **em R**. Cada seção aponta para a página do PDF, e as seções com exercício trazem um problema original para fixar o conteúdo.
 
-## 🔁 O método
+## O método
 
 | Passo | O que fazer | Onde |
 |---|---|---|
 | 1. Ler | Ler a seção indicada | PDF do livro (página no caderno) |
-| 2. Praticar | Escrever a solução do 🧪 exercício **sem olhar a resposta** | `praticar/capXX_*.ipynb` |
+| 2. Praticar | Escrever a solução do exercício **sem olhar a resposta** | `praticar/capXX_*.ipynb` |
 | 3. Conferir | Comparar com o gabarito e entender a diferença | `resolvidos/capXX_*.ipynb` |
-| 4. Resumir | Explicar com as próprias palavras nas células 📝 | `praticar/` |
+| 4. Resumir | Explicar com as próprias palavras nas células | `praticar/` |
 | 5. Registrar | Commit + push, para o progresso ficar visível | GitHub |
 
-## 📚 Conteúdo (48 exercícios em R)
+## Conteúdo (48 exercícios em R)
 
 | Parte | Capítulos | Exemplos de exercícios |
 |---|---|---|
@@ -26,14 +26,14 @@ Cada capítulo virou um caderno Jupyter **em R**. Cada seção aponta para a pá
 
 Os exercícios usam só dados que já vêm no R (`mtcars`, `airquality`, `iris`, `USArrests`) ou dados simulados. Não é preciso baixar nada.
 
-## 🛠️ Melhorias em relação ao livro
+## Melhorias em relação ao livro
 
 - **Cadernos Jupyter com kernel R** no VS Code: dá para ler, rodar e anotar no mesmo lugar.
 - Vários métodos são **implementados do zero** antes de usar o pacote: validação cruzada, Nadaraya-Watson, kernel ridge, bagging, PDP, conformal, FunkSVD. Assim dá para ver o que a função pronta faz por dentro.
 - Simulações em que se conhece a função verdadeira, para **medir** viés, variância e cobertura, não só ver o resultado.
 - R 4.6 e versões atuais dos pacotes (`glmnet`, `randomForest`, `gbm`, `e1071`, `FNN`, `mgcv`, `arules`). O gabarito inteiro é executado por `ferramentas/testar_cadernos.py`.
 
-## ▶️ Como usar
+## Como usar
 
 ```powershell
 # 1) R 4.x instalado (winget install RProject.R) e Python 3.12 (para o Jupyter)
@@ -50,7 +50,7 @@ $env:PATH = "$PWD\.venv\Scripts;$env:PATH"; Rscript ferramentas\instalar_pacotes
 No VS Code, abra `praticar/cap01_regressao_introducao.ipynb` → **Select Kernel → Jupyter Kernel… → R**.
 O [Guia de Estudos (PDF)](Guia_de_Estudos.pdf) explica o passo a passo para iniciantes.
 
-## ⚖️ Direitos autorais
+## Direitos autorais
 
 O livro **não** está neste repositório. Para estudar, use a sua própria cópia.
 Os exercícios, os cadernos, os scripts e o guia são autorais e estão sob licença [MIT](LICENSE).
